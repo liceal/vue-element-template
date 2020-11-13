@@ -5,6 +5,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
+import permissionRouters from './modules/permission'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -159,9 +160,11 @@ export const constantRoutes = [
       }
     ]
   },
-
-  // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
+]
+
+export const asyncRoutes = [
+  permissionRouters
 ]
 
 const createRouter = () => new Router({
