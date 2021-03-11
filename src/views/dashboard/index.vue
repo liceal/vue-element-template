@@ -1,14 +1,16 @@
 <template>
   <div class="dashboard-container">
+    <el-button @click="showAsyncMenu(['admin'])">显示admin路由</el-button>
+    <el-button @click="showAsyncMenu(['user'])">显示user路由</el-button>
+    <el-button @click="showAsyncMenu(['admin', 'user','edit'])">显示全部路由</el-button>
+
     <div class="dashboard-text">name: {{ name }}</div>
     <div>权限：{{roles}}</div>
 
     <div v-permission="['admin']">v-permission方式 admin权限，修改权限将删除这个节点，不会再显示</div>
     <div v-if="checkPermission(['user'])">v-if方式 动态user权限</div>
     
-    <el-button @click="showAsyncMenu(['admin'])">显示admin路由</el-button>
-    <el-button @click="showAsyncMenu(['user'])">显示user路由</el-button>
-    <el-button @click="showAsyncMenu(['admin', 'user','edit'])">显示全部路由</el-button>
+    
   </div>
 </template>
 
