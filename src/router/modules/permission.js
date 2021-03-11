@@ -1,8 +1,6 @@
-/** When your routing table is too long, you can split it into small modules**/
-
 import Layout from '@/layout'
 
-const permissionRouters = {
+export default [{
   path: '/permission',
   component: Layout,
   redirect: 'noRedirect',
@@ -27,11 +25,9 @@ const permissionRouters = {
     },
     {
       path: 'edit',
-      component: () => import('@/views/permission-demo/user'),
+      component: () => import('@/views/permission-demo/edit'),
       name: 'user',
       meta: { title: 'edit可见菜单', noCache: true, roles: ['edit'] }
     },
   ]
-}
-
-export default permissionRouters
+}]

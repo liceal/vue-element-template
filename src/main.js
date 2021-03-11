@@ -22,6 +22,7 @@ import '@/permission' // permission control
  *
  * Currently MockJs will be used in the production environment,
  * please remove it before going online ! ! !
+ * ? 注册了貌似关闭不掉 请在vue.config.js里面关闭
  */
 if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')

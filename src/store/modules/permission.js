@@ -16,7 +16,7 @@ function hasPermission(roles, route) {
 
 //? 过滤异步路由
 export function filterAsyncRoutes(routers, roles) {
-  console.log('过滤异步路由', routers, roles);
+  // console.log('过滤异步路由', routers, roles);
   const res = []
 
   routers.forEach(route => {
@@ -50,11 +50,11 @@ const actions = {
     return new Promise(resolve => {
       let accessedRoutes
       accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
-      console.log('处理完权限路由', accessedRoutes);
+      // console.log('处理完权限路由', accessedRoutes);
       commit('SET_ROUTES', accessedRoutes)
       resolve(accessedRoutes)//? 返回可以用的异步路由，然后注册一下
     })
-  }
+  },
 }
 
 export default {
