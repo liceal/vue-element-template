@@ -16,6 +16,12 @@ export default [{
       component: () => import('@/views/test-mock'),
       name: 'Test',
       meta: { title: 'mock测试', noCache: true, roles: ['admin', 'user'] }
+    },
+    {
+      path: 'pinyin',
+      component: () => import('@/views/pinyin'),
+      name: 'Pinyin',
+      meta: { title: '拼音', roles: ['admin', 'user', 'edit'] }
     }
   ]
 }]
