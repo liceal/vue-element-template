@@ -12,25 +12,26 @@
 </template>
 
 <script>
-import pinyinMatch from "pinyin-match";
+import pinyinMatch from 'pinyin-match'
 export default {
-  name: "Pinyin",
+  name: 'Pinyin',
   data() {
     return {
-      routers: ["生产计划", "生产报表", "数据字典", "你好啊"],
-      input_value: ""
-    };
+      routers: ['生产计划', '生产报表', '数据字典', '你好啊'],
+      input_value: ''
+
+    }
   },
   computed: {
     result() {
-      if (this.input_value === "") return this.routers;
-      let res = this.routers.filter(v =>
+      if (this.input_value === '') return this.routers
+      const res = this.routers.filter(v =>
         pinyinMatch.match(v, this.input_value)
-      );
-      return res;
+      )
+      return res
     }
   }
-};
+}
 </script>
 
 <style></style>
