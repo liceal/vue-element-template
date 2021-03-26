@@ -17,7 +17,7 @@ export default {
   name: 'Pinyin',
   data() {
     return {
-      routers: ['生产计划', '生产报表', '数据字典', '你好啊'],
+      routers: ['生产计划', '生产报表', '数据字典', '你好啊', '数据aaa啦啦oooaa'],
       input_value: ''
 
     }
