@@ -17,16 +17,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+/*50 = navbar  */
+  /* 34 = tagsView */
+$appMainHeight:calc(100vh - 50px - 34px);
 .app-main {
-  /*50 = navbar  */
-  min-height: calc(100vh - 50px);
+  min-height: $appMainHeight;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 .fixed-header+.app-main {
-  padding-top: 50px;
+  height: appMainHeight;
+  /* padding-top: 50px; */
 }
 </style>
 
