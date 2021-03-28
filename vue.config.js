@@ -36,7 +36,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    before: require('./mock/mock-server.js') //? mock服务，重启服务更新
+    before: require('./mock/mock-server.js') // ? mock服务，重启服务更新
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
